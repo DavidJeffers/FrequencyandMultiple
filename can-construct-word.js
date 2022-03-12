@@ -2,6 +2,13 @@
 // create frequency counter of the word
 // create frequency counter of the letters
 // check to see if the word obj is in letters obj
+
+/**
+ * checks if word can be made from letters
+ * @param {string} word 
+ * @param {string} letters 
+ * @returns  boolen
+ */
 function canConstructWord(word, letters) {
     if(letters === '') return false;
     if(word === '') return true;
