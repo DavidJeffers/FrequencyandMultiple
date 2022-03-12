@@ -14,20 +14,15 @@
 function twoArrayObject(keys, values) {
     let result = {};
 
-    for(let i = 0; i < keys.length; i++){
-        if(values[i] == undefined){
+    for (let i = 0; i < keys.length; i++) {
+
+        if (values[i] == undefined) {
             result[keys[i]] = null;
-          
-        }
-        else if(!keys[i]){
+        } else if (!keys[i]) {
             return result;
-        }
-        else {
+        } else {
             result[keys[i]] = values[i];
         }
-
-
-        
     }
     console.log(result)
     return result;

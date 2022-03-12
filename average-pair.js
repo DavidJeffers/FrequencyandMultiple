@@ -17,17 +17,13 @@ function averagePair(numbers, avg) {
 
     while (left < right) {
 
-        let avgCalc = (numbers[left] + numbers[right]) / 2;
+        const avgCalc = (numbers[left] + numbers[right]) / 2;
 
         if (avgCalc === avg) {
             return true;
-        }
-
-        else if (avgCalc > avg) {
+        } else if (avgCalc > avg) {
             right--;
-        }
-
-        else if (avgCalc < avg) {
+        } else {
             left++;
         }
     }

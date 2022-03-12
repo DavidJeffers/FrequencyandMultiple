@@ -9,27 +9,29 @@
  * @param {string} letters 
  * @returns  boolen
  */
+
+
 function canConstructWord(word, letters) {
-    if(letters === '') return false;
-    if(word === '') return true;
-   let wordFreq = frequencyCounter(word);
-   let lettersFreq = frequencyCounter(letters);
-   for(let letter in wordFreq){
-       if(lettersFreq[letter] ){
-           if(lettersFreq[letter] >= wordFreq[letter]){
-               return true;
-           }
-       }
-   }
-   return false;
+    if (letters === '') return false;
+    if (word === '') return true;
+    const wordFreq = frequencyCounter(word);
+    const lettersFreq = frequencyCounter(letters);
+    for (let letter in wordFreq) {
+        if (lettersFreq[letter]) {
+            if (lettersFreq[letter] >= wordFreq[letter]) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
-function frequencyCounter(word){
- const letterFrequency = {}
-    for(let letter of word){
-             let letterCount = letterFrequency[letter] || 0
-             letterFrequency[letter] = letterCount + 1;
-     
+function makeFrequencyCounter(word) {
+    const letterFrequency = {}
+    for (let letter of word) {
+        let letterCount = letterFrequency[letter] || 0
+        letterFrequency[letter] = letterCount + 1;
+
     }
     return letterFrequency;
 }
